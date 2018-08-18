@@ -1,2 +1,5 @@
 # IDE & editors
 .idea/
+
+# db
+db.sqlite3

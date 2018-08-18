@@ -9,7 +9,7 @@ Setup postgres as described in `settings.py`.
 ```bash
 
 $ python manage.py migrate
-$ python manage.py runserver
+$ python manage.py runserver    
 
 ```
 

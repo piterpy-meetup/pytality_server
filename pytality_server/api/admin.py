@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from pytality_server.api.models import Snippet
+
+
+class SnippetAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Snippet, SnippetAdmin)

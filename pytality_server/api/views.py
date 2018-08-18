@@ -14,3 +14,7 @@ def upload_file(request):
     else:
         form = SubmitCodeForm()
     return render(request, 'upload.html', {'form': form})
+
+
+def get_next_snippet(request):
+    pass

@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+
+  backend:
+    build:
+      context: '.'
+      dockerfile: 'docker/Dockerfile'
+    depends_on:
+      - db
+      - redis
+    ports:
+      - '8000'
+    
+  db:
+    image: 'postgres:latest'
+  
+  redis:
+    image: 'redis:latest'
+    restart: 'always'
+    ports:
+      - '6379'
+    volumes:
+      - 'redis-data:/data'
+
+volumes:
+  redis-data:

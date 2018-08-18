@@ -21,6 +21,7 @@ Response:
 ```json
 {
     "status": "OK",
+    "snippet_id": 17,
     "code": "print a\n\nprint b"
 }
 ```

@@ -18,16 +18,31 @@ $ python manage.py runserver
 [1] Get next random snippet: `GET /snippets/next/`
 
 Response:
-```
-<file with the random incorrect snippet>
+```json
+{
+    "status": "OK",
+    "code": "print a\n\nprint b"
+}
 ```
 
-[2] Submit corrected snippet from developer: `POST /snippets/<snippet_id>/`
+[2] Submit state of a snippet from developer (websocket)
 
 Request:
+```json
+{
+    "snippet_id": 17,
+    "code": "print(a)\n\nprint(b)" 
+}
 ```
-<file with the corrected snippet>
+
+Response:
+```json
+{
+    "status": "OK"
+}
 ```
+
+[3] Submit the fact that developer is finished (websocket)
 
 Response:
 ```json

@@ -61,7 +61,7 @@ DATABASES = {
         'NAME': 'pytality_server',
         'USER': 'pytality_user',
         'PASSWORD': 'local',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
@@ -91,6 +91,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # ASGI, channels
 ASGI_APPLICATION = "pytality_server.routing.application"
